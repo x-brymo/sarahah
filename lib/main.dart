@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 
+import 'core/config/handdler_color.dart';
+import 'view/loader.dart';
+
 void main() {
   runApp(const MyApp());
 }
@@ -9,12 +12,15 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
+      title: 'Sarahah',
       theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
-        useMaterial3: true,
+
+        primarySwatch: buildMaterialColor(Color(0xff13CB4E)),
+       
+        
       ),
-      home: Container(),
+      debugShowCheckedModeBanner: false,
+      home:  LoaderScreen(),
     );
   }
 }

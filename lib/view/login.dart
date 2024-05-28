@@ -13,11 +13,11 @@ class LoginScreen extends StatelessWidget {
             Container(
               height: 200,
               width: double.infinity,
-              child: Lottie.asset('assets/lottie/loader.json', fit: BoxFit.fill, reverse: true,
+              child: Lottie.asset('asset/lottie/login.json', fit: BoxFit.fill, reverse: true,
                 repeat: true, animate: true,
               ),
             ),
-            
+
             Container(
               height: 200,
               width: double.infinity,
