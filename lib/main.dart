@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 import 'core/config/handdler_color.dart';
-import 'view/loader.dart';
+import 'core/router/router.dart';
 
 void main() {
   runApp(const MyApp());
@@ -12,15 +12,13 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: 'Sarahah',
       theme: ThemeData(
-
-        primarySwatch: buildMaterialColor(Color(0xff13CB4E)),
-       
-        
+        primarySwatch: getMaterialColor(),
       ),
-      debugShowCheckedModeBanner: false,
-      home:  LoaderScreen(),
+      initialRoute: Routers.loaderRoute,
+      onGenerateRoute: Routers.generateRoute,
     );
   }
 }
