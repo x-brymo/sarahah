@@ -14,6 +14,8 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Sarahah',
+      themeMode: ThemeMode.system,
+      darkTheme: ThemeData.dark(),
       theme: ThemeData(
         primarySwatch: getMaterialColor(),
       ),

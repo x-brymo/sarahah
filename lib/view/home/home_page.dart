@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:sarahah/view/settings/settings_page.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -14,12 +15,20 @@ class _HomePageState extends State<HomePage> {
       length: 3,
       child: Scaffold(
         appBar: AppBar(
+          automaticallyImplyLeading: false,
+          leading: IconButton(onPressed: () {}, icon: const Icon(Icons.person_2_rounded), ),
           actions: [
             IconButton(onPressed: () {}, icon: const Icon(Icons.search)),
+            IconButton(onPressed: () {}, icon: const Icon(Icons.notifications)),
+
             PopupMenuButton(itemBuilder: (_) {
               return [
-                const PopupMenuItem(
+                 PopupMenuItem(
                   child: Text('Settings'),
+                  value: 'Settings',
+                  onTap: () {
+                    Navigator.push(context, MaterialPageRoute(builder: (context) => const SettingsPage()));
+                  },
                 ),
                 const PopupMenuItem(
                   child: Text('Logout'),
@@ -28,7 +37,8 @@ class _HomePageState extends State<HomePage> {
             })
           ],
           bottom: const TabBar(
-            
+              indicatorColor: Colors.white,
+              labelColor: Colors.white,
             tabs: [
             Tab(
               text: 'Wish List',
